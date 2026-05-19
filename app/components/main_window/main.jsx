@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import main_image from '../../../public/images_home/portada Finaflow.png'
+import main_image from '../../../public/images_home/Portada FinaFlow hd.png'
 import styles from '../../styles/main_window/main.module.scss'
 
 export default function Main () {

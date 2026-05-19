@@ -28,16 +28,6 @@
     }
 }
 
-@media screen and (max-width: 1240px) {
-    .main_text_image {
-        justify-content: center;
-    }
-
-    .main_text {
-        width: 100%;
-    }
-}
-
 .main_img {
 }
 
@@ -66,6 +56,20 @@
     }
 }
 
+@media screen and (max-width: 1240px) {
+    .main_text_image {
+        justify-content: center;
+    }
+
+    .main_text {
+        width: 100%;
+    }
+
+    .main_button {
+        margin: 2% 0%;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .main_section {
         display: flex;
@@ -80,7 +84,7 @@
     .main_img {
         img {
             width: min-content;
-            max-width: 90%;
+            max-width: 100%;
         }
     }
 
