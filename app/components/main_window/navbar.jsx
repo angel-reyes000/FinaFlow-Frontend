@@ -8,7 +8,7 @@ export default function NavBar () {
         <>
             <div className={styles.navbar}>
                 <div className={styles.navbar_logo}>
-                    <Image src={logo} height={70} width={70}></Image>
+                    <Image src={logo} height={70} width={70} alt='Application logo'></Image>
                     <p>FinaFlow</p>
                 </div>
                 <div className={styles.navbar_sections}>

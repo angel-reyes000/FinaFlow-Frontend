@@ -1,0 +1,47 @@
+.features {
+    display: grid;
+    grid-template-rows: auto auto;
+    height: auto;
+    padding: 0% 3%;
+}
+
+.features_question {
+    margin-bottom: 1%;
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+.features_section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+.feature_info {
+    display: block;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    border-right: 1px solid black;
+}
+
+.feature_image_background {
+    padding: 2%;
+    border-radius: 20px;
+    background-color: rgb(216, 255, 221);
+}
+
+.feature_note {
+    text-align: center;
+    width: 80%;
+    h3{
+        margin: 7%;
+        font-size: 1.7rem;
+        font-weight: 900;
+    }
+    p {
+        margin: 4%;
+        font-size: 1.1rem;
+    }
+}
