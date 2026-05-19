@@ -12,6 +12,10 @@ export default function Home () {
       <main>
 
         <section>
+          <Main />
+        </section>
+
+        <section>
           <Features />
         </section>  
         
