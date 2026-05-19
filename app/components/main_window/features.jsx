@@ -25,8 +25,8 @@ export default function Features () {
                             <FaTrophy size={80} color='0BA600' />                            
                         </div>
                         <div className={styles.feature_note}>
-                           <h3>Clear reports</h3>
-                            <p>Track your income, expenses and savings with clear and simple reports.</p> 
+                           <h3>Reach your goal</h3>
+                            <p>Plan and achieve your financial goals step by step.</p> 
                         </div>                        
                     </div>
                     <div className={styles.feature_info}>
@@ -34,8 +34,8 @@ export default function Features () {
                             <MdTrendingUp size={80} color='0BA600' />                            
                         </div>
                         <div className={styles.feature_note}>
-                           <h3>Clear reports</h3>
-                            <p>Track your income, expenses and savings with clear and simple reports.</p> 
+                           <h3>Invest</h3>
+                            <p>Discover investment options based on your profile.</p> 
                         </div>                        
                     </div>
                     <div className={styles.feature_info} style={{borderRight: 'none'}}>
@@ -43,8 +43,8 @@ export default function Features () {
                             <FaDollarSign size={80} color='0BA600' />                            
                         </div>
                         <div className={styles.feature_note}>
-                           <h3>Clear reports</h3>
-                            <p>Track your income, expenses and savings with clear and simple reports.</p> 
+                           <h3>Tracking expenses</h3>
+                            <p>Monitor your spending and keep full control of your finances.</p> 
                         </div>                        
                     </div>
                 </div>
