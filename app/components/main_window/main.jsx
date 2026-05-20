@@ -2,10 +2,10 @@ import Image from 'next/image';
 import main_image from '../../../public/images_home/Portada FinaFlow hd.png'
 import styles from '../../styles/main_window/main.module.scss'
 
-export default function Main () {
+export default function Main ({ ref }) {
   return (
     <>
-      <div className={styles.main_section}>
+      <div ref={ref} className={styles.main_section}>
         <div className={styles.main_text_image}>
           <div className={styles.main_text}>
             <h1>Master your finances with clarity in a simple, modern and elegat way.</h1>

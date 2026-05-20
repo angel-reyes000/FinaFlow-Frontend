@@ -1,4 +1,7 @@
+"use client"
+
 import styles from '../../styles/main_window/footer.module.scss';
+import { useRef, useEffect } from 'react';
 
 export default function Footer () {
     return (

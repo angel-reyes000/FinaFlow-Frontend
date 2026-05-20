@@ -2,10 +2,10 @@ import styles from '../../styles/main_window/body_section.module.scss';
 import body_image from '../../../public/images_home/body FinaFlow.png';
 import Image from 'next/image';
 
-export default function BodySection () {
+export default function BodySection ({ ref }) {
     return (
         <>
-            <div className={styles.body}>
+            <div ref={ref} className={styles.body}>
                 <div className={styles.body_image}>
                     <Image src={body_image} width={600} height={500} alt='Representative image for the application'/>
                 </div>

@@ -1,9 +1,9 @@
 import styles from '../../styles/main_window/pay.module.scss';
 
-export default function Pay () {
+export default function Pay ({ ref }) {
     return (
         <>
-            <div className={styles.pay}>
+            <div ref={ref} className={styles.pay}>
                 <div className={styles.pay_free}>
                     <div className={styles.pay_cost}>
                         <p>Free</p>
