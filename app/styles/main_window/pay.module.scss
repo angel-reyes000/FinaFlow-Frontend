@@ -1,0 +1,185 @@
+.pay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    padding: 4% 0%;
+    background: linear-gradient(205deg,
+                            rgb(126, 210, 191), 
+                            rgb(234, 250, 246),
+                            rgb(126, 210, 191));
+}
+
+.pay_free {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: red;
+    padding: 2%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.pay_free:hover {
+    animation-name: CardFreeScale;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes CardFreeScale {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.05);
+        box-shadow: 30px 30px 30px rgb(0, 68, 84);
+    }
+}
+
+.pay_cost {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10%;
+    p {
+        margin: 0;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    h6 {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+.pay_list {
+    width: 100%;
+    margin-bottom: 30%;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+}
+
+.pay_button_free {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button {
+        padding: 3% 5%;
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+        width: 100%;
+        border-radius: 10px;
+        background-color: rgb(12, 220, 192);
+        border: 0;
+    }
+
+    button:hover {
+        background-color: rgb(10, 173, 151);
+    }
+
+    button:active {
+        transform: scale(0.9);
+    }
+
+}
+
+/*-----------------------------PREMIUM---------------------------------*/
+.pay_premium {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: red;
+    padding: 2%;
+    background: linear-gradient(to bottom, rgb(102, 102, 102), rgb(0, 0, 0));
+    color: rgb(255, 237, 165);
+    border-radius: 20px;
+}
+
+.pay_button_premium {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    button {
+        padding: 3% 5%;
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: rgb(240, 207, 74);
+        width: 100%;
+        border-radius: 10px;
+        background-color: white;
+        border: 0;
+    }
+
+    button:hover {
+        background-color: rgb(211, 211, 211);
+        color: rgb(255, 235, 155);
+    }
+
+    button:active {
+        transform: scale(0.9);
+    }
+
+}
+
+.pay_premium:hover {
+    animation-name: CardPremiumScale;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+@keyframes CardPremiumScale {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.05);
+        box-shadow: 30px 30px 30px rgb(0, 130, 159);
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .pay {
+        padding: 15% 0%;
+    }
+
+    .pay_free {
+        width: 70%;
+    }
+
+    .pay_button_free {
+        margin-bottom: 5%;
+        
+        button {
+            width: 80%;
+        }
+    }
+
+    .pay_premium {
+        width: 70%;
+    }
+
+    .pay_button_premium {
+        margin-bottom: 5%;
+
+        button {
+            width: 80%;
+        }
+    }
+}
