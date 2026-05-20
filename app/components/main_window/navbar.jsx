@@ -6,9 +6,6 @@ import logo from '../../../public/images_home/logo FinaFlow.png';
 import styles from '../../styles/main_window/navbar.module.scss';
 
 export default function NavBar ({ refs }) {
-
-    console.log(refs)
-
     return (
         <>
             <div id='navbar' className={styles.navbar}>

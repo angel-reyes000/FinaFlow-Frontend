@@ -35,10 +35,18 @@
     .body_image {
         img {
             width: 100%;
+            height: fit-content;
         }
     }
 
     .body_text {
         text-align: center;
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
     }
 }
