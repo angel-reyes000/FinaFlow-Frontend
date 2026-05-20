@@ -1,6 +1,7 @@
-import Main from './components/main_window/main';
 import NavBar from './components/main_window/navbar';
+import Main from './components/main_window/main';
 import Features from './components/main_window/features';
+import BodySection from './components/main_window/body_section'
 
 export default function Home () {
   return (
@@ -18,6 +19,10 @@ export default function Home () {
         <section>
           <Features />
         </section>  
+
+        <section>
+          <BodySection />
+        </section>
         
       </main>
       

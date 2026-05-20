@@ -1,0 +1,44 @@
+.body {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 245, 245);
+    padding: 8% 4%;
+}
+
+.body_image {
+    img {
+        border-radius: 10px;
+    }
+}
+
+.body_text {
+    h2 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .body_image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .body_text {
+        text-align: center;
+    }
+}
