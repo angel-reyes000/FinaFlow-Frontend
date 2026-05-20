@@ -32,7 +32,7 @@
 }
 
 .main_button {
-    margin-bottom: 2%;
+    margin: 2% 0%;
 
     button {
         width: 20%;
@@ -81,10 +81,21 @@
         width: fit-content;
     }
 
+    .main_text {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
     .main_img {
         img {
             width: min-content;
             max-width: 100%;
+            height: fit-content;
         }
     }
 
@@ -95,6 +106,7 @@
         align-items: center;
         button {
             width: 100%;
+            margin: 10% 0%;
         }
     }
 }
