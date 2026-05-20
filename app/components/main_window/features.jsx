@@ -3,10 +3,10 @@ import { MdBarChart, MdTrendingUp } from 'react-icons/md';
 import { FaTrophy, FaDollarSign } from 'react-icons/fa';
 import styles from '../../styles/main_window/features.module.scss';
 
-export default function Features () {
+export default function Features ({ ref }) {
     return ( 
         <>
-            <div className={styles.features}>
+            <div ref={ref} className={styles.features}>
                 <div className={styles.features_question}>
                     <h2>Why FinaFlow?</h2>
                 </div>
