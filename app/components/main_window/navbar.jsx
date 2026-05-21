@@ -16,14 +16,17 @@ export default function NavBar ({ refs }) {
 
         function Scroll () {
             const currentScroll = window.scrollY;
-
             if (currentScroll > lastScroll) {
-                advance += 2
-                refNavBar.current.style.transform = `translateY(-${advance}px)`
-            } else {
+                advance += window.innerWidth <= 800 ? 5 : 2;
+                refNavBar.current.style.transform = `translateY(-${advance}px)`;
+            } else if (window.scrollY === 0) {
                 advance = 0
-                refNavBar.current.style.transform = 'translateY(0px)'
+            } else {
+                advance = 0;
+                refNavBar.current.style.transform = 'translateY(0px)';
             }
+            
+            
 
             lastScroll = currentScroll;
         }
