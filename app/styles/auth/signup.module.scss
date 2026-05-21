@@ -1,19 +1,19 @@
-.login_background {
+.signup_background {
     background-image: url('/images_auth/background_auth_finaflow.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100dvh;
+    height: auto;
 }
 
-.login_logo_card {
+.signup_logo_card {
     display: grid;
     grid-template-rows: auto 1fr;
     justify-items: center;
     align-content: center;
 }
 
-.login_logo {
+.signup_logo {
     display: grid;
     grid-template-columns: auto auto;
     align-content: center;
@@ -26,13 +26,14 @@
     }
 }
 
-.login_card {
+.signup_card {
     display: block;
     width: 25%;
     background-color: white;
     padding: 0% 2% 2% 2%;
     box-sizing: border-box;
     border-radius: 20px;
+    margin-bottom: 5%;
 }
 
 .card_title {
@@ -139,31 +140,31 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .login_background {
+    .signup_background {
         height: auto;
     }
 
-    .login_card {
-        margin-bottom: 30%; 
+    .signup_card {
+        margin-bottom: 30%;
         width: 40%;
         padding: 0% 5% 2% 5%;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .login_card {
+    .signup_card {
         width: 55%;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .login_card {
+    .signup_card {
         width: 70%;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .login_card {
+    .signup_card {
         width: 90%;
     }
 }

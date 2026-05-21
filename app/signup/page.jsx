@@ -2,51 +2,61 @@
 
 import Image from 'next/image';
 import background from '../../public/images_auth/background_auth_finaflow.png';
-import styles from '../styles/auth/login.module.scss';
+import styles from '../styles/auth/signup.module.scss';
 import logo from '../../public/images_home/logo FinaFlow.png';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation'
 
-export default function Login () { 
+export default function Signup () { 
     const router = useRouter()
-    
-        useEffect(() => {
-            AOS.init({
-                duration: 1000,
-                delay: 0,
-                once: true
-            })
-        }, [])
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            delay: 0,
+            once: true
+        })
+    }, [])
 
     return (
-            <main className={styles.login_background}>
+            <main className={styles.signup_background}>
 
-                <section className={styles.login_logo_card}>
-                    <div className={styles.login_logo} onClick={() => router.push('/')} data-aos='fade'>
+                <section className={styles.signup_logo_card}>
+                    <div className={styles.signup_logo} onClick={() => router.push('/')} data-aos='fade'>
                         <Image src={logo} width={100} height={100} alt='Logo FinaFlow'/>
                         <h1>FinaFlow</h1>
                     </div>
-                    <div className={styles.login_card} data-aos='zoom-in'>
+                    <div className={styles.signup_card} data-aos='zoom-in'>
                         <div className={styles.card_title}>
-                            <h3>Welcome again!</h3>
+                            <h3>Welcome to FinaFlow!</h3>
                         </div>
                         <form className={styles.card_form}>
                             <div className={styles.card_inputs}>
                                 <label>
-                                    Email:<input type='email' placeholder='Email'></input>
+                                    Name:<input placeholder='Name'></input>
                                 </label>
                                 <label>
+                                    last name:<input placeholder='Last name'></input>
+                                </label>
+                                <label>
+                                    Email:<input type='email' placeholder='Email'></input>
+                                </label>
+                                
+                                <label>
                                     Password:<input type='password' placeholder='Password'></input>
-                                </label>                                
+                                </label>  
+                                <label>
+                                    Confirm password:<input type='password' placeholder='Confirm password'></input>
+                                </label>                              
                             </div>
                             <div className={styles.card_create_acocunt}>
-                                <p>Don't have an account? <Link href='/signup'>Create an account.</Link></p>
+                                <p><Link href='/login'>I already have an account.</Link></p>
                             </div>
                             <div className={styles.card_button}>
-                                <button>Log in</button>
+                                <button>Sign Up</button>
                             </div>
                             <div className={styles.card_line}>
                                 <hr></hr>
