@@ -1,0 +1,172 @@
+.login_background {
+    background-image: url('/images_auth/background_auth_finaflow.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100dvh;
+}
+
+.login_logo_card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    align-content: center;
+}
+
+.login_logo {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-items: center;
+    margin-top: 3%;
+
+    h1 {
+        font-size: 3rem;
+        color: rgb(41, 160, 132);
+    }
+}
+
+.login_card {
+    display: block;
+    width: 25%;
+    background-color: white;
+    padding: 0% 2% 2% 2%;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.card_title {
+    width: 100%;
+    color: rgb(33, 125, 103);
+
+    h3 {
+        font-size: 2rem;
+        border-radius: 100px;
+    }
+}
+
+.card_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_inputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    
+    label {
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 100%;
+    }
+
+    input {
+        font-size: 1.2rem;
+        padding: 2% 1% 2% 1%;
+        border-radius: 5px;
+        border: 3px solid rgb(187, 187, 187);
+        width: 100%;
+        max-width: 95%;
+    }
+}
+
+.card_create_acocunt {
+    width: 100%;
+    text-align: end;
+
+    p {
+        font-size: 1rem;
+        margin: 3% 0% 20% 0%;
+
+        a {
+            text-decoration: none;
+            color: rgb(33, 125, 103);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.card_button {
+    button {
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 100%;
+        padding: 2%;
+        border-radius: 5px;
+        background-color: rgb(12, 220, 192);
+        color: white;
+        border: 0;
+    }
+
+    button:hover{
+        cursor: pointer; 
+        background-color: rgb(11, 192, 168); 
+    }
+
+    button:active {
+        transform: scale(0.9);
+    }
+}
+
+.card_line {
+    display: flex;
+    margin: 5% 0%;
+    justify-content: center;
+    hr {
+        width: 100%;
+    }
+
+    p{  
+        white-space: nowrap;
+        width: fit-content;
+        margin: 0;
+        position: absolute;
+        background-color: white;
+    }
+}
+
+.card_google {
+    button {
+        width: 100%;
+        padding: 2%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .login_background {
+        height: auto;
+    }
+
+    .login_card {
+        margin-bottom: 30%;
+    }
+
+    .login_card {
+        width: 40%;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .login_card {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .login_card {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login_card {
+        width: 90%;
+    }
+}
