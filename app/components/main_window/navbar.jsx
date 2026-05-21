@@ -5,9 +5,11 @@ import Link from 'next/link';
 import logo from '../../../public/images_home/logo FinaFlow.png';
 import styles from '../../styles/main_window/navbar.module.scss';
 import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function NavBar ({ refs }) {
     const refNavBar = useRef(null);
+    const router = useRouter();
 
     useEffect(() => {
 
@@ -75,7 +77,7 @@ export default function NavBar ({ refs }) {
                     
                 </div>
                 <div className={styles.navbar_button}>
-                    <button>Sign up / Sign in</button>
+                    <button onClick={() => router.push('/login')}>Sign up / Sign in</button>
                 </div>
             </div>
         </>
