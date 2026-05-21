@@ -4,7 +4,7 @@
     grid-template-rows: 1fr auto;   
     height: auto; 
     width: auto;
-    padding: 3% 4%;
+    padding: 8% 4% 3% 4%;
 }
 
 .main_text_image {
@@ -12,7 +12,7 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
 }
 
 .main_text {
@@ -74,9 +74,11 @@
     .main_section {
         display: flex;
         flex-wrap: wrap;
+        padding-top: 25%;
     }
 
     .main_text_image {
+        text-align: center;
         max-width: 100%;
         width: fit-content;
     }
@@ -108,5 +110,23 @@
             width: 100%;
             margin: 10% 0%;
         }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main_section {
+        padding-top: 30%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main_section {
+        padding-top: 40%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .main_section {
+        padding-top: 60%;
     }
 }
