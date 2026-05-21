@@ -26,8 +26,6 @@ export default function NavBar ({ refs }) {
                 refNavBar.current.style.transform = 'translateY(0px)';
             }
             
-            
-
             lastScroll = currentScroll;
         }
 
