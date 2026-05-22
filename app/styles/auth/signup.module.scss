@@ -140,6 +140,16 @@
     }
 }
 
+.invalid_message {
+    width: 100%;
+    text-align: start;
+    p {
+        margin: 1% 0% 0% 0%;
+        color: red;
+        font-size: 0.8rem;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .signup_background {
         height: auto;
