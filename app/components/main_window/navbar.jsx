@@ -77,7 +77,16 @@ export default function NavBar ({ refs }) {
                     
                 </div>
                 <div className={styles.navbar_button}>
-                    <button onClick={() => router.push('/login')}>Sign up / Sign in</button>
+                    <button onClick={() => {
+                        if (refs.sessionActive) {
+                            localStorage.removeItem('token')
+                            router.push('/login')
+                        } else {
+                            router.push('/login')
+                        }
+
+                        }}>{refs.sessionActive ? 'Log out' : 'Sign up / Sign in'}
+                    </button>
                 </div>
             </div>
         </>
