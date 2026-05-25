@@ -28,7 +28,9 @@ export default function Home () {
         } else {
           setSessionActive(false);
           return
-        }
+        }        
+        
+        router.refresh();
 
         await fetch('http://localhost:5000/users/login', {
           method: 'GET',
@@ -38,7 +40,6 @@ export default function Home () {
           }
         })
 
-        router.refresh();
 
       } catch (error) {
         console.log("Error token ", error)
@@ -59,7 +60,7 @@ export default function Home () {
       <main>
 
         <section>
-          <Main ref={refSectionHome}/>
+          <Main ref={refSectionHome} sessionActive={sessionActive}/>
         </section>
 
         <section>

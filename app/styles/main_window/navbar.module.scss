@@ -89,6 +89,41 @@
     }
 }
 
+.navbar_modal {
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, white, rgb(0, 138, 141));
+}
+
+.modal_title {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.modal_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    button {
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        width: 49%;
+        padding: 2%;
+        border: 0;
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: gray;
+    }
+    button:active {
+        transform: scale(0.9);
+    }
+}
+
+
 @media screen and (max-width: 800px) {
     .navbar {
         display: grid;
