@@ -4,14 +4,23 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../../public/images_home/logo FinaFlow.png';
 import styles from '../../styles/main_window/navbar.module.scss';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function NavBar ({ refs }) {
     const refNavBar = useRef(null);
+    const refDialog = useRef(null);
     const router = useRouter();
 
     useEffect(() => {
+
+        AOS.init({
+            duration: 1000,
+            delay: 0,
+            once: false
+        })
 
         let lastScroll = 0;
         let advance = 0;
@@ -36,6 +45,10 @@ export default function NavBar ({ refs }) {
         return () => window.removeEventListener("scroll", Scroll);
 
     }, [])
+
+    function openModal () {
+        refDialog.current.showModal();
+    }
 
     return (
         <>
@@ -79,8 +92,7 @@ export default function NavBar ({ refs }) {
                 <div className={styles.navbar_button}>
                     <button onClick={() => {
                         if (refs.sessionActive) {
-                            localStorage.removeItem('token')
-                            router.push('/login')
+                            openModal()
                         } else {
                             router.push('/login')
                         }
@@ -88,7 +100,22 @@ export default function NavBar ({ refs }) {
                         }}>{refs.sessionActive ? 'Log out' : 'Sign up / Sign in'}
                     </button>
                 </div>
+                
             </div>
+            <dialog ref={refDialog} className={styles.navbar_modal} data-aos='fade'>
+                <div className={styles.modal_title}>
+                    <Image src={logo} height={70} width={70} alt='Application logo'></Image>
+                    <h2>Are you sure you want to log out?</h2>
+                </div>
+                <div className={styles.modal_buttons}>
+                    <button onClick={() => {
+                        localStorage.removeItem('token')
+                        router.push('/login')
+                    }} style={{backgroundColor: 'rgb(9, 101, 94)', color: 'white'}}>Log out</button>
+                    
+                    <button onClick={() => refDialog.current.close()} style={{backgroundColor: 'rgb(170, 170, 170)', color: 'black'}}>Cancel</button>
+                </div>                
+            </dialog>
         </>
     )
 }

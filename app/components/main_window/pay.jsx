@@ -38,7 +38,7 @@ export default function Pay ({ ref }) {
                 </div>
                 <div className={styles.pay_premium} data-aos='flip-right'>
                     <div className={styles.pay_cost}>
-                        <p>Free</p>
+                        <p>Premium</p>
                         <h3>$5 USD</h3>
                         <h6>Monthly</h6>
                     </div>

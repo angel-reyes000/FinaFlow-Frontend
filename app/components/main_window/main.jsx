@@ -3,9 +3,13 @@ import main_image from '../../../public/images_home/Portada FinaFlow hd.png'
 import styles from '../../styles/main_window/main.module.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation'; 
+import logo from '../../../public/images_home/logo FinaFlow.png';
 
-export default function Main ({ ref }) {
+export default function Main ({ ref, sessionActive }) {
+  const refDialog = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     AOS.init({
@@ -14,6 +18,14 @@ export default function Main ({ ref }) {
       once: true
     })
   })
+
+  function started () {
+    if (sessionActive) {
+      router.push('/finaflow')
+    } else {
+      refDialog.current.showModal();
+    }
+  }
 
   return (
     <>
@@ -28,9 +40,19 @@ export default function Main ({ ref }) {
           </div>
         </div>
         <div className={styles.main_button}>
-          <button>Get started!</button>
+          <button onClick={() => started()}>Get started!</button>
         </div>
       </div>
+      <dialog ref={refDialog} className={styles.main_modal} data-aos='fade'>
+          <div className={styles.modal_title}>
+              <Image src={logo} height={70} width={70} alt='Application logo'></Image>
+              <h2>You must log in before getting started.</h2>
+          </div>
+          <div className={styles.modal_buttons}>
+              <button onClick={() => router.push('/login')}>Log in</button>
+              <button onClick={() => refDialog.current.close()}>Ok</button>
+          </div>                
+      </dialog>
     </>
   );
 }

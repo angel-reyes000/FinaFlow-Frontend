@@ -57,7 +57,8 @@ export default function Signup () {
         } else {
             setDiferentPassword(false)
         }
-        try {
+        try {   
+            
             const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_USERS}`, {
                 method: 'POST',
                 headers: {
