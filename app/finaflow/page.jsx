@@ -1,7 +1,13 @@
+import Dashboards from "../components/finaflow/dashboards"
+
 export default function FinaFlow () {
     return (
         <>
-            <h1>Hola</h1>
+            <main>                
+                <section>
+                    <Dashboards />
+                </section>
+            </main>
         </>
     )
 }
