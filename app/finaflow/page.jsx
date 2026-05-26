@@ -3,10 +3,12 @@ import Dashboards from "../components/finaflow/dashboards"
 export default function FinaFlow () {
     return (
         <>
-            <main>                
+            <main>           
+
                 <section>
                     <Dashboards />
                 </section>
+                
             </main>
         </>
     )
