@@ -1,7 +1,9 @@
 import styles from '../../styles/finaflow/dashboards.module.scss';
 import { FiMenu } from 'react-icons/fi';
+import { FaUtensils } from 'react-icons/fa';
 import PieChart from './pieChart';
 import LineChart from './lineChart';
+import BarChar from './barChar';
 
 export default function Dashboards () {
     return (
@@ -16,10 +18,13 @@ export default function Dashboards () {
                     </div>
                     <div className={styles.dashboards_visual}>
                         <div className={styles.dashboards_columns_one}>
-                            <div className={styles.dashboards_saldo}>
-                                <h3>Saldo actual</h3>
-                                <h2>4250.00</h2>
+                            <div className={styles.dashboards_background_saldo}>
+                                <div className={styles.dashboards_saldo}>
+                                    <h3>Saldo actual</h3>
+                                    <h2>4250.00</h2>
+                                </div>
                             </div>
+                            
                             <div className={styles.dashboards_presupuesto}>
                                 <div className={styles.presupuesto_title}>
                                     <h3>Presupuesto detallado</h3>
@@ -66,10 +71,49 @@ export default function Dashboards () {
                         </div>
                         <div className={styles.dashboards_columns_two}>
                             <div className={styles.dashboards_gastos}>
-                                Gastos semanales
+                                <BarChar />
                             </div>
                             <div className={styles.dashboards_categorias}>
-                                Categorias principales
+                                <div className={styles.categorias_title}>
+                                    <h3>Categorias principales</h3>
+                                </div>
+                                <div className={styles.categorias_data}>
+                                    <div className={styles.categorias_category}>
+                                        <div className={styles.category_image}>
+                                            <FaUtensils size={60} color='rgb(178, 0, 0)'/>
+                                        </div>
+                                        <div className={styles.category_data}>   
+                                            <h3>Alimentos</h3>
+                                            <p>$4250.00</p>
+                                        </div>
+                                        <div className={styles.category_load}>
+                                            <div className={styles.load_porcentaje}>
+                                                <p>50%</p>
+                                            </div>
+                                            <div className={styles.load}>
+                                                <div className={styles.loading}>.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className={styles.categorias_category}>
+                                        <div className={styles.category_image}>
+                                            <FaUtensils size={60} color='rgb(178, 0, 0)'/>
+                                        </div>
+                                        <div className={styles.category_data}>   
+                                            <h3>Alimentos</h3>
+                                            <p>$4250.00</p>
+                                        </div>
+                                        <div className={styles.category_load}>
+                                            <div className={styles.load_porcentaje}>
+                                                <p>50%</p>
+                                            </div>
+                                            <div className={styles.load}>
+                                                <div className={styles.loading}>.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

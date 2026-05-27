@@ -1,4 +1,5 @@
-$radius: 20px;
+$radius_dashboards: 20px;
+$title_dashboards: 2rem;
 
 .dashboards {
     display: grid;
@@ -18,6 +19,7 @@ $radius: 20px;
 .dashboards_visual {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1%;
 }
 
 .dashboards_columns_one {
@@ -27,16 +29,28 @@ $radius: 20px;
     gap: 1%;
 }
 
-.dashboards_saldo {
+.dashboards_background_saldo {
     background: linear-gradient(to bottom, rgb(1, 255, 225), rgb(0, 78, 69));
     width: 100%;
-    border-radius: $radius;
-    font-size: 2rem;
-    padding: 3% 1% 10% 5%;
+    border-radius: $radius_dashboards;
+    font-size: $title_dashboards;
+    padding: 3% 0% 0% 5%;
+    height: auto;
     color: white;
+}
+
+.dashboards_saldo {
+    background-image: url('/images_dashboards/chart_saldo_finaflow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: $radius_dashboards;
 
     h2 {
         margin: 0;
+        margin-bottom: 10%;
     }
 
     h3 {
@@ -49,13 +63,13 @@ $radius: 20px;
     display: grid;
     grid-template-rows: auto 1fr;
     background-color: white;
-    border-radius: $radius;
+    border-radius: $radius_dashboards;
     width: 100%;
     padding: 3% 3% 1% 3%;
 }
 
 .presupuesto_title {
-    font-size: 2rem;
+    font-size: $title_dashboards;
 
     h3 {
         margin: 0;
@@ -65,10 +79,6 @@ $radius: 20px;
 .presupuesto_graficos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.dashboards_columns_two {
-    display: flex;
 }
 
 .presupuesto_barras {
@@ -99,11 +109,11 @@ $radius: 20px;
 .dashboards_ingresos {
     width: 100%;
     background-color: white;
-    border-radius: $radius;
+    border-radius: $radius_dashboards;
     padding: 0;
     h3 {
         padding: 3% 0% 1% 3%;
-        font-size: 2rem;
+        font-size: $title_dashboards;
         margin: 0;
     }
 }
@@ -119,4 +129,98 @@ $radius: 20px;
         width: 100%;
         visibility: hidden;
     }
+}
+
+.dashboards_columns_two {
+    display: grid;
+    gap: 1%;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+.dashboards_gastos {
+    background-color: white;
+    border-radius: $radius_dashboards;
+}
+
+.dashboards_categorias {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: white;
+    border-radius: $radius_dashboards;
+    width: 100%;
+    height: 100%;
+    padding: 3% 3% 1% 3%;
+    box-sizing: border-box;
+}
+
+.categorias_title {
+    font-size: $title_dashboards;
+
+    h3 {
+        margin: 0;
+        margin-bottom: 5%;
+    }
+
+}
+
+.categorias_data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5%;
+}
+
+.categorias_category {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 5%;
+}
+
+.category_image {
+    background-color: rgb(255, 147, 147);
+    width: fit-content;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.category_data {
+    font-size: 1.2rem;
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.category_load {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.load_porcentaje {
+    display: flex;
+    justify-content: end;
+    p {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
+
+.load {
+    background-color: gray;
+    border-radius: 20px;
+}
+
+.loading {
+    background: linear-gradient(to right, rgb(1, 255, 225), rgb(0, 78, 69));
+    width: 50%;
+    border-radius: 20px;
 }

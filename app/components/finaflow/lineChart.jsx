@@ -31,7 +31,7 @@ export default function LineChart () {
         series: [
             {
                 type: 'line',
-                data: [10, 25, 18, 40, 30, 10, 40, 70, 20],
+                data: [10, 25, 18, 40, 30, 10, 40, 70, 20, 55, 40, 20],
                 smooth: false,
                 areaStyle: {}
             }
@@ -40,6 +40,6 @@ export default function LineChart () {
     }
 
     return (
-        <ReactECharts option={option} style={{ width: '100%', height: '500px'}}/>
+        <ReactECharts option={option} style={{ width: '100%', height: '300px'}}/>
     )
 }
