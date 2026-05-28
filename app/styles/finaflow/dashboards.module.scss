@@ -14,6 +14,8 @@ $title_dashboards: 2rem;
 .dashboards_graphs {
     display: grid;
     grid-template-rows: auto auto auto;
+    gap: 1%;
+    padding-bottom: 5%;
 }
 
 .dashboards_visual {
@@ -106,7 +108,7 @@ $title_dashboards: 2rem;
     height: 50%;
 }
 
-.dashboards_ingresos {
+.dashboards_gastos {
     width: 100%;
     background-color: white;
     border-radius: $radius_dashboards;
@@ -139,9 +141,15 @@ $title_dashboards: 2rem;
     height: 100%;
 }
 
-.dashboards_gastos {
+.dashboards_ingresos {
     background-color: white;
     border-radius: $radius_dashboards;
+    padding: 3% 3% 1% 3%;
+
+    h3 {
+        margin: 0;
+        font-size: $title_dashboards;
+    }
 }
 
 .dashboards_categorias {
@@ -180,7 +188,6 @@ $title_dashboards: 2rem;
 }
 
 .category_image {
-    background-color: rgb(255, 147, 147);
     width: fit-content;
     padding: 2%;
     border-radius: 20px;
@@ -223,4 +230,51 @@ $title_dashboards: 2rem;
     background: linear-gradient(to right, rgb(1, 255, 225), rgb(0, 78, 69));
     width: 50%;
     border-radius: 20px;
+
+    p{
+        margin: 0;
+        visibility: hidden;
+    }
+
+}
+
+.dashboards_table {
+    display: grid;
+    grid-template-rows: auto auto;
+    align-content: start;
+    max-height: 550px;
+    min-height: 550px;
+    background-color: white;
+    border-radius: $radius_dashboards;
+    padding: 2% 2% 5% 2%;
+    gap: 5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    h1 { 
+        margin: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        height: min-content;
+    }
+
+    thead {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    tr {
+        padding: 1%;
+        margin: 0;
+    }
+
+    td {
+        border-bottom: 1px solid black;
+        padding: 1%;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
 }

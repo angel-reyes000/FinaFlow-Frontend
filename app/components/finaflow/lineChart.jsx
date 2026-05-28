@@ -9,18 +9,13 @@ export default function LineChart () {
         xAxis: {
             type: 'category',
             data: [
-                'January',
-                'Febrary',
-                'March',
-                'April',
-                'May',
-                'June',
-                'July',
-                'August',
-                'September',
-                'October',
-                'November',
-                'Dicember'
+                'semana 1',
+                'semana 2',
+                'semana 3',
+                'semana 4',
+                'semana 5',
+                'semana 6',
+                'semana 7',
             ]
         },
 
@@ -31,7 +26,7 @@ export default function LineChart () {
         series: [
             {
                 type: 'line',
-                data: [10, 25, 18, 40, 30, 10, 40, 70, 20, 55, 40, 20],
+                data: [10, 25, 18, 40, 30, 10, 40,],
                 smooth: false,
                 areaStyle: {}
             }
