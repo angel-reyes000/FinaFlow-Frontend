@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation'; 
-import logo from '../../../public/images_home/logo FinaFlow.png';
+import logo from '../../../public/images_home/new_logo_finaflow.png';
 
 export default function Main ({ ref, sessionActive }) {
   const refDialog = useRef(null);
