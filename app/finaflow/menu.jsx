@@ -2,10 +2,19 @@
 
 import styles from '../styles/finaflow/menu.module.scss';
 import { FiMenu } from 'react-icons/fi';
-import logo from '../../public/images_home/logo FinaFlow.png';
+import logo from '../../public/images_home/new_logo_finaflow.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { 
+    MdDashboard,
+    MdAccountBalanceWallet,
+    MdAttachMoney,
+    MdTrendingUp,
+    MdPieChart,
+    MdCreditCard,
+    MdSettings,
+ } from 'react-icons/md'; 
 
 export default function Menu () {
     const router = useRouter()
@@ -22,15 +31,17 @@ export default function Menu () {
                 </div>
                 <div className={styles.menu_list}>
                     <ul>
-                        <li onClick={() => router.push('/finaflow')}>Dashboards</li>
-                        <li>Registrar gasto</li>
-                        <li>Saldos actuales</li>
-                        <li>Deudas</li>
+                        <li onClick={() => router.push('/finaflow')}><MdDashboard size={25} style={{marginRight: '5%'}} />Dashboards</li>
+                        <li><MdAccountBalanceWallet size={25} style={{marginRight: '5%'}}/>Saldos actuales</li>
+                        <li><MdAttachMoney size={25} style={{marginRight: '5%'}} />Registrar gasto</li>
+                        <li><MdTrendingUp size={25} style={{marginRight: '5%'}} />Ingresos</li>
+                        <li><MdPieChart size={25} style={{marginRight: '5%'}} />Presupuesto mensual</li>
+                        <li><MdCreditCard size={25} style={{marginRight: '5%'}} />Deudas</li>
                     </ul>
                 </div>
                 <div className={styles.menu_footer}>
                     <ul>
-                        <li>Settings</li>
+                        <li><MdSettings size={25} style={{marginRight: '5%'}} />Settings</li>
                     </ul>
                 </div>
             </div>

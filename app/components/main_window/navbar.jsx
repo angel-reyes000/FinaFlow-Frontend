@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../../../public/images_home/logo FinaFlow.png';
+import logo from '../../../public/images_home/new_logo_finaflow.png';
 import styles from '../../styles/main_window/navbar.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
