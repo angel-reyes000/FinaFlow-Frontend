@@ -84,9 +84,6 @@ export default function Dashboards () {
     return (
         <>
             <div className={styles.dashboards}>
-                <div className={styles.dashboards_three_dots}>
-                    <FiMenu size={50}/>
-                </div>
                 <div className={styles.dashboards_graphs}>
                     <div className={styles.dashboards_title}>
                         <h1>Dashboards</h1>
