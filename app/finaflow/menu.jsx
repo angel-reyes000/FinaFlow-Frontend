@@ -21,6 +21,9 @@ export default function Menu () {
 
     return (
         <>
+            <div className={styles.dashboards_three_dots}>
+                <FiMenu size={50}/> 
+            </div>
             <div className={styles.menu}>
                 <div className={styles.three_dots}>
                     <FiMenu size={50}/>
@@ -32,7 +35,7 @@ export default function Menu () {
                 <div className={styles.menu_list}>
                     <ul>
                         <li onClick={() => router.push('/finaflow')}><MdDashboard size={25} style={{marginRight: '5%'}} />Dashboards</li>
-                        <li><MdAccountBalanceWallet size={25} style={{marginRight: '5%'}}/>Saldos actuales</li>
+                        <li onClick={() => router.push('/finaflow/balances')}><MdAccountBalanceWallet size={25} style={{marginRight: '5%'}}/>Saldos actuales</li>
                         <li><MdAttachMoney size={25} style={{marginRight: '5%'}} />Registrar gasto</li>
                         <li><MdTrendingUp size={25} style={{marginRight: '5%'}} />Ingresos</li>
                         <li><MdPieChart size={25} style={{marginRight: '5%'}} />Presupuesto mensual</li>
