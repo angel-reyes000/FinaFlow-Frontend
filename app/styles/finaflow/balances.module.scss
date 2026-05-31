@@ -1,0 +1,176 @@
+.balances {
+    padding: 0% 2%;
+}
+
+.balances_body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 3%;
+}
+
+.balances_title {
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.balances_totals {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.totals_total {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid rgb(176, 176, 176);
+    padding: 1%;
+    box-sizing: border-box;
+    width: 24%;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.total_background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    padding: 5%;
+}
+
+.total_text {
+    h2 {
+        font-size: 2rem;
+        margin: 0;
+    }
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.balances_types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+
+.section_types {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: white;
+    padding: 5%;
+    border-radius: 20px;
+}
+
+.types_title {
+
+    h3 {
+        font-size: 2rem;
+        margin: 0% 0% 5% 0%;
+    }
+}
+
+.types {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.types_type {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid rgb(176, 176, 176);
+    padding: 2%;
+    cursor: pointer;
+}
+
+.type_account {
+    display: flex;
+    gap: 5%;
+    width: 50%;
+}
+
+.type_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.type_name {
+    display: inline-block;
+    align-content: center;
+
+    h4 {
+        margin: 0;
+        font-size: 1.3rem;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.type_data {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5%;
+    width: 50%;
+}
+
+.data_balance {
+    display: inline-block;
+    align-content: center;
+    justify-items: right;
+
+    h4 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.data_sign {
+    display: inline-block;
+    align-content: center;
+    justify-items: center;
+
+    p {
+        font-size: 2rem;
+        font-weight: 1000;
+        margin: 0;
+    }
+
+}
+
+.section_dashboard {
+    display: grid;
+    grid-template-rows: auto auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+.dashboard_title {
+     h3 {
+        font-size: 2rem;
+        margin: 0;
+     }
+}
+
+.dashboard_pieChart {
+    height: 100%;
+}

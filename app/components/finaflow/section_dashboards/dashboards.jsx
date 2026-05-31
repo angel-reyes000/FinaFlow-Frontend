@@ -1,6 +1,6 @@
 "use client"
 
-import styles from '../../styles/finaflow/dashboards.module.scss';
+import styles from '../../../styles/finaflow/dashboards.module.scss';
 import { FiMenu } from 'react-icons/fi';
 import { FaUtensils, FaCar } from 'react-icons/fa';
 import PieChart from './pieChart';
