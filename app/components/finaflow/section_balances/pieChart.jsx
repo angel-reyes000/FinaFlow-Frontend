@@ -18,11 +18,31 @@ export default function PieChart () {
             type: "pie",
             radius: "80%",
             data: [
-            { value: 100.00, name: "Efectivo" },
-            { value: 200.00, name: "Tarjetas de credito" },
-            { value: 60.00, name: "Tarjetas de debito" },
-            { value: 320.00, name: "Ahorros" },
-            { value: 350.00, name: "Otros" },
+                {
+                    value: 100.00,
+                    name: "Efectivo",
+                    itemStyle: { color: 'rgb(76, 255, 121)' }
+                },
+                {
+                    value: 200.00,
+                    name: "Tarjetas de credito",
+                    itemStyle: { color: 'rgb(132, 239, 255)' }
+                },
+                {
+                    value: 60.00,
+                    name: "Tarjetas de debito",
+                    itemStyle: { color: 'rgb(255, 132, 132)' }
+                },
+                {
+                    value: 320.00,
+                    name: "Ahorros",
+                    itemStyle: { color: 'rgb(243, 255, 131)' }
+                },
+                {
+                    value: 350.00,
+                    name: "Otros",
+                    itemStyle: { color: 'rgb(182, 182, 182)' }
+                }
             ],
             label: {
                 show: true,
@@ -41,6 +61,6 @@ export default function PieChart () {
     };
 
     return (    
-        <ReactECharts option={option} style={{width: '100%', height: '400px'}}/>
+        <ReactECharts option={option} style={{width: '100%', height: '500px'}}/>
     )
 }
