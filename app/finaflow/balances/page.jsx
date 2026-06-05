@@ -1,6 +1,6 @@
 "use client"
 
-import styles from '../../styles/finaflow/balances.module.scss';
+import styles from '../../styles/finaflow/balances/balances.module.scss';
 import { FaWallet } from "react-icons/fa";      // Cartera
 import { FaMoneyBillWave } from "react-icons/fa"; // Billete
 import { FaPiggyBank } from "react-icons/fa";   // Ahorros
@@ -8,8 +8,12 @@ import { FaCreditCard } from "react-icons/fa";  // Tarjeta
 import { FaChevronRight } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import PieChart from '../../components/finaflow/section_balances/pieChart';
+import { useRouter } from 'next/navigation';
 
 export default function Balances () {
+
+    const router = useRouter();
+
     return (
         <>
             <div className={styles.balances}>
@@ -61,13 +65,13 @@ export default function Balances () {
                                 <h3>Cuentas y balances</h3>
                             </div>
                             <div className={styles.types}>
-                                <div className={styles.types_type} style={{borderTopLeftRadius: '10px', borderTopRightRadius: '10px'}}>
+                                <div className={styles.types_type} style={{borderTopLeftRadius: '10px', borderTopRightRadius: '10px', cursor: 'default'}}>
                                     <div className={styles.type_account}>
                                         <div className={styles.type_image} style={{backgroundColor: 'rgb(76, 255, 121)'}}>
                                             <FaMoneyBillWave size={40} style={{color: 'rgb(50, 124, 69)'}} />
                                         </div>
                                         <div className={styles.type_name}>
-                                            <h4>Efectivo</h4>
+                                            <h4>Cash</h4>
                                             <p>Dinero en mano</p>
                                         </div>
                                     </div>
@@ -77,11 +81,11 @@ export default function Balances () {
                                             <p>disponible</p>
                                         </div>
                                         <div className={styles.data_sign}>
-                                            <FaChevronRight size={20} style={{color: 'gray'}}/>
+                                            <FaChevronRight size={20} style={{color: 'gray', visibility: 'hidden'}}/>
                                         </div>
                                     </div>
                                 </div>
-                                <div className={styles.types_type}>
+                                <div onClick={() => router.push('/finaflow/balances/admin_credit_card')} className={styles.types_type}>
                                     <div className={styles.type_account}>
                                         <div className={styles.type_image} style={{backgroundColor: 'rgb(132, 239, 255)'}}>
                                             <FaCreditCard size={40} style={{color: 'rgb(0, 97, 119)'}}/>
@@ -172,8 +176,122 @@ export default function Balances () {
                             </div>
                         </div>
                     </div>
-                    <div>
-
+                    <div className={styles.balances_table}>
+                        <div className={styles.section_table_title}>
+                            <h3>Historial reciente</h3>
+                        </div>
+                        <div className={styles.table}>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Fecha</td>
+                                        <td>Descripcion</td>
+                                        <td>Cuenta</td>
+                                        <td>Tipo</td>
+                                        <td>Monto</td>
+                                        <td>Saldo resultante</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

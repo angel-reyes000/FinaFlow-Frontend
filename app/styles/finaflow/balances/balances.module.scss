@@ -5,7 +5,7 @@
 .balances_body {
     display: grid;
     grid-template-rows: auto 1fr auto;
-    gap: 3%;
+    gap: 1%;
 }
 
 .balances_title {
@@ -173,4 +173,40 @@
 
 .dashboard_pieChart {
     height: 100%;
+}
+
+.balances_table {
+    background-color: white;
+    padding: 3%;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.section_table_title {
+
+    h3 {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+.table {
+    overflow-y: scroll;
+    max-height: 550px;
+
+    table {
+        width: 100%; 
+        border-collapse: collapse;
+
+        td {
+            border-bottom: 1px solid black;
+            font-size: 1.2rem;
+            padding: 1%;
+        }
+
+        thead {
+            font-weight: 600;
+        }
+    }
 }
