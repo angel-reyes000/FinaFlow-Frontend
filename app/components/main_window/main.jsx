@@ -45,7 +45,10 @@ export default function Main ({ ref, sessionActive }) {
       </div>
       <dialog ref={refDialog} className={styles.main_modal} data-aos='fade'>
           <div className={styles.modal_title}>
+            <div className={styles.modal_logo}>
               <Image src={logo} height={70} width={70} alt='Application logo'></Image>
+              <h1>FinaFlow</h1>
+            </div>
               <h2>You must log in before getting started.</h2>
           </div>
           <div className={styles.modal_buttons}>

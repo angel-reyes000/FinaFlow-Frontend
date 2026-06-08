@@ -9,9 +9,10 @@ import { FaChevronRight } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import PieChart from '../../components/finaflow/section_balances/pieChart';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import AdminCreditCard from './admin_credit_card/page';
 
 export default function Balances () {
-
     const router = useRouter();
 
     return (

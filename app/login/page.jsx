@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import background from '../../public/images_auth/background_auth_finaflow.png';
 import styles from '../styles/auth/login.module.scss';
-import logo from '../../public/images_home/logo FinaFlow.png';
+import logo from '../../public/images_home/new_logo_finaflow.png';
 import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
