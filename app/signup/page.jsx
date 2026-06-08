@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import background from '../../public/images_auth/background_auth_finaflow.png';
 import styles from '../styles/auth/signup.module.scss';
-import logo from '../../public/images_home/logo FinaFlow.png';
+import logo from '../../public/images_home/new_logo_finaflow.png';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import AOS from 'aos';
