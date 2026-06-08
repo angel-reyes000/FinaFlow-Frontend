@@ -106,7 +106,7 @@ export default function Balances () {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={styles.types_type}>
+                                <div onClick={() => router.push('/finaflow/balances/admin_debit_card')} className={styles.types_type}>
                                     <div className={styles.type_account}>
                                         <div className={styles.type_image} style={{backgroundColor: 'rgb(255, 132, 132)'}}>
                                             <FaCreditCard size={40} style={{color: 'rgb(119, 0, 0)'}}/>
@@ -126,7 +126,7 @@ export default function Balances () {
                                         </div>
                                     </div>
                                 </div>
-                                <div className={styles.types_type}>
+                                <div onClick={() => router.push('/finaflow/balances/admin_savings')} className={styles.types_type}>
                                     <div className={styles.type_account}>
                                         <div className={styles.type_image} style={{backgroundColor: 'rgb(243, 255, 131)'}}>
                                             <FaPiggyBank size={40} style={{color: 'rgb(122, 153, 0)'}}/>

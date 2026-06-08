@@ -15,6 +15,7 @@ $formAddInputPadding: 1% 2%;
     a {
         text-decoration: none;
         color: black;
+        font-size: 1.2rem;
     }
 
     a:hover {
@@ -123,6 +124,61 @@ $formAddInputPadding: 1% 2%;
     height: auto;
     max-height: 500px;
     padding: 2%;
+}
+
+.dialog_sure_delete {
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.sure_delete_icon {
+    display: flex;
+    justify-content: center;
+    color: yellow;
+}
+
+.sure_delete_title {
+    text-align: center;
+    margin-bottom: 5%;
+    
+     h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: white;
+     }
+
+     p {
+        font-size: 1rem;
+        margin: 1%;
+        color: red;
+     }
+}
+
+.sure_delete_buttons {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        width: 40%;
+        border-radius: 20px;
+        border: 0;
+        font-size: 1.1rem;
+        padding: 2%;
+        font-weight: 600;
+        color: white;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    button:active {
+        transform: scale(0.9);
+    }
 }
 
 .form_add {
