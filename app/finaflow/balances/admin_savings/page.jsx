@@ -30,7 +30,7 @@ const pre_data = [
     }
 ]
 
-export default function AdminCreditCard () {
+export default function AdminSaving () {
     const [data, setData] = useState(pre_data);
     const [inputSearch, setInputSearch] = useState('');
 
@@ -79,7 +79,7 @@ export default function AdminCreditCard () {
                 <dialog ref={refModalEdit} className={styles.dialog_add}>
                     <form className={styles.form_add} onSubmit={(e) => e.preventDefault()}>
                         <div className={styles.form_add_title}>
-                            <h2>Edit credit card record</h2>                        
+                            <h2>Edit saving record</h2>                        
                         </div>
                         <div className={styles.form_add_holder}>
                             <label>
@@ -149,7 +149,7 @@ export default function AdminCreditCard () {
                 <dialog ref={refModalAdd} className={styles.dialog_add}>
                     <form className={styles.form_add} onSubmit={(e) => e.preventDefault()}>
                         <div className={styles.form_add_title}>
-                            <h2>New credit card record</h2>                        
+                            <h2>New saving record</h2>                        
                         </div>
                         <div className={styles.form_add_holder}>
                             <label>
@@ -220,7 +220,7 @@ export default function AdminCreditCard () {
             <div className={styles.credit_card}>
                 <div className={styles.credit_card_title}>
                     <Link href='/finaflow/balances/'>{'< '}Back</Link>
-                    <h1>Credit Card record</h1>
+                    <h1>Savings record</h1>
                 </div>
                 <div className={styles.background_table_input_button}>
                     <div className={styles.credit_card_search_add}>
