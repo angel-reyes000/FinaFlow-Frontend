@@ -115,10 +115,7 @@ export default function Signup () {
                                     Confirm password:<input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} type='password' maxLength={10} placeholder='Confirm password'></input>
                                     {diferentPassword ? <DiferentPassword /> : null}                              
                                 </label>
-                            </div>
-                            <div className={styles.card_create_acocunt}>
-                                <p><Link href='/login'>I already have an account.</Link></p>
-                            </div>
+                            </div>                            
                             {invalidData ? <InvalidData /> : null}
                             <div className={styles.card_button}>
                                 <button type='submit'>Sign Up</button>
@@ -129,6 +126,9 @@ export default function Signup () {
                             </div>
                             <div className={styles.card_google}>
                                 <button>Google</button>
+                            </div>
+                            <div className={styles.card_create_acocunt}>
+                                <p><Link href='/login'>I already have an account.</Link></p>
                             </div>
                         </form>
                     </div>

@@ -92,13 +92,14 @@
 .navbar_modal {
     border: 0;
     border-radius: 10px;
-    background: linear-gradient(to bottom, white, rgb(0, 138, 141));
+    background-color:  rgb(255, 255, 255);
+    padding: 2%;
 }
 
 .modal_title {
     width: 100%;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .modal_buttons {
@@ -116,7 +117,7 @@
         cursor: pointer;
     }
     button:hover{
-        background-color: gray;
+        background-color: rgb(165, 165, 165);
     }
     button:active {
         transform: scale(0.9);
