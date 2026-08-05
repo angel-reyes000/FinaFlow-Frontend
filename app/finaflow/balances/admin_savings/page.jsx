@@ -2,7 +2,7 @@
 
 import { number } from 'echarts';
 import styles from '../../../styles/finaflow/balances/admin_balances.module.scss';
-import { use, useEffect, useRef, useState } from 'react';
+import { use, useEffect, useEffectEvent, useRef, useState } from 'react';
 import { FaPlus, FaSearch, FaTrash } from 'react-icons/fa';
 import Link from 'next/link';
 import { ref } from 'process';
@@ -41,10 +41,30 @@ export default function AdminSaving () {
     const [lastFourDigits, setLastFourDigits] = useState('');
     const [status, setStatus] = useState('');
     const [balance, setBalance] = useState('');
+    const [savingType, setSavingType] = useState('');
 
     const refModalEdit = useRef(null);
     const refModalAdd = useRef(null);
     const refModalSureDelete = useRef(null);
+    const refHiddenInputBank = useRef(null);
+    const refHiddenInputLastFourDigits = useRef(null);
+    const refHiddenInputCardType = useRef(null);
+    const refHiddenInputStatus = useRef(null);
+
+    useEffect(() => {
+        if (savingType === 'cash') {
+            refHiddenInputBank.current.style.display = 'none';
+            refHiddenInputLastFourDigits.current.style.display = 'none';
+            refHiddenInputCardType.current.style.display = 'none';
+            refHiddenInputStatus.current.style.display = 'none';
+        } else {
+            refHiddenInputBank.current.style.display = 'flex';
+            refHiddenInputLastFourDigits.current.style.display = 'flex';
+            refHiddenInputCardType.current.style.display = 'flex';
+            refHiddenInputStatus.current.style.display = 'flex';
+        }
+
+    }, [savingType])
 
     function modalSureDelete () {
         return (
@@ -81,12 +101,12 @@ export default function AdminSaving () {
                         <div className={styles.form_add_title}>
                             <h2>Edit saving record</h2>                        
                         </div>
-                        <div className={styles.form_add_holder}>
-                            <label>
-                                Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
-                            </label>
-                        </div>
-                        <div className={styles.form_add_bank_type}>
+                        <div className={styles.form_add_inputs}>
+                            <div className={styles.form_add_holder}>
+                                <label>
+                                    Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
+                                </label> 
+                            </div>                            
                             <label>
                                 Bank:
                                 <select value={bank} onChange={(e) => setBank(e.target.value)}>
@@ -101,8 +121,6 @@ export default function AdminSaving () {
                                     <option>Visa</option>
                                 </select>
                             </label>
-                        </div>
-                        <div className={styles.form_add_digits_status}>
                             <label>
                                 Last four digits:
                                 <input value={lastFourDigits} onChange={(e) => setLastFourDigits(e.target.value)}></input>
@@ -114,8 +132,6 @@ export default function AdminSaving () {
                                     <option>Inactive</option>
                                 </select>
                             </label>
-                        </div>
-                        <div className={styles.form_add_balance}>
                             <label>
                                 Balance:
                                 <input type='number' value={balance} onChange={(e) => setBalance(e.target.value)}></input>
@@ -151,44 +167,47 @@ export default function AdminSaving () {
                         <div className={styles.form_add_title}>
                             <h2>New saving record</h2>                        
                         </div>
-                        <div className={styles.form_add_holder}>
+                        <div className={styles.form_add_inputs}>
+                            <div className={styles.form_add_holder}>
+                                <label>
+                                    Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
+                                </label>
+                            </div>                            
                             <label>
-                                Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
-                            </label>
-                        </div>
-                        <div className={styles.form_add_bank_type}>
-                            <label>
-                                Bank:
-                                <select value={bank} onChange={(e) => setBank(e.target.value)}>
-                                    <option></option>
-                                    <option>BBVA</option>
-                                    <option>BanCoppel</option>
+                                Saving type:
+                                <select value={savingType} onChange={(e) => setSavingType(e.target.value)}>
+                                    <option value='cash'>Cash</option>
+                                    <option value='credit_card'>Credit card</option>
+                                    <option value='debit_card'>Debit card</option>
                                 </select>
                             </label>
-                            <label>
-                                Card type:
-                                <select>
-                                    <option>Visa</option>
-                                </select>
-                            </label>
-                        </div>
-                        <div className={styles.form_add_digits_status}>
-                            <label>
-                                Last four digits:
-                                <input value={lastFourDigits} onChange={(e) => setLastFourDigits(e.target.value)}></input>
-                            </label>
-                            <label>
-                                status:
-                                <select value={status} onChange={(e) => setStatus(e.target.value)}>
-                                    <option>Active</option>
-                                    <option>Inactive</option>
-                                </select>
-                            </label>
-                        </div>
-                        <div className={styles.form_add_balance}>
                             <label>
                                 Balance:
                                 <input type='number' value={balance} onChange={(e) => setBalance(e.target.value)}></input>
+                            </label>
+                            <label ref={refHiddenInputLastFourDigits}>
+                                Last four digits:
+                                <input value={lastFourDigits} onChange={(e) => setLastFourDigits(e.target.value)}></input>
+                            </label>
+                            <label ref={refHiddenInputStatus}>
+                                status:
+                                <select value={status} onChange={(e) => setStatus(e.target.value)}>
+                                    <option value='active'>Active</option>
+                                    <option value='inactive'>Inactive</option>
+                                </select>
+                            </label>
+                            <label ref={refHiddenInputBank}>
+                                Bank:
+                                <select value={bank} onChange={(e) => setBank(e.target.value)}>
+                                    <option value='bbva'>BBVA</option>
+                                    <option value='bancoppel'>BanCoppel</option>
+                                </select>
+                            </label>
+                            <label ref={refHiddenInputCardType}>
+                                Card type:
+                                <select>
+                                    <option value='visa'>Visa</option>
+                                </select>
                             </label>
                         </div>
                         <div className={styles.form_add_buttons}>

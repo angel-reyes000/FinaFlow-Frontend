@@ -6,6 +6,7 @@ import logo from '../../../public/images_home/new_logo_finaflow.png';
 import styles from '../../styles/main_window/navbar.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { FaArrowRightFromBracket  } from 'react-icons/fa6';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -101,10 +102,10 @@ export default function NavBar ({ refs }) {
                     </button>
                 </div>
                 
-            </div>
+            </div> 
             <dialog ref={refDialog} className={styles.navbar_modal} data-aos='fade'>
                 <div className={styles.modal_title}>
-                    <Image src={logo} height={70} width={70} alt='Application logo'></Image>
+                    <FaArrowRightFromBracket  size={50} />
                     <h2>Are you sure you want to log out?</h2>
                 </div>
                 <div className={styles.modal_buttons}>
@@ -113,7 +114,7 @@ export default function NavBar ({ refs }) {
                         router.push('/login')
                     }} style={{backgroundColor: 'rgb(9, 101, 94)', color: 'white'}}>Log out</button>
                     
-                    <button onClick={() => refDialog.current.close()} style={{backgroundColor: 'rgb(170, 170, 170)', color: 'black'}}>Cancel</button>
+                    <button onClick={() => refDialog.current.close()} style={{border: '1px solid rgb(0, 0, 0)', color: 'black'}}>Cancel</button>
                 </div>                
             </dialog>
         </>

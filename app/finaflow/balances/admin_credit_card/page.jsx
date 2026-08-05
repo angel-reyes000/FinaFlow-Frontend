@@ -81,12 +81,12 @@ export default function AdminCreditCard () {
                         <div className={styles.form_add_title}>
                             <h2>Edit credit card record</h2>                        
                         </div>
-                        <div className={styles.form_add_holder}>
-                            <label>
-                                Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
-                            </label>
-                        </div>
-                        <div className={styles.form_add_bank_type}>
+                        <div className={styles.form_add_inputs}>
+                            <div className={styles.form_add_holder}>
+                                <label>
+                                    Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
+                                </label>
+                            </div>
                             <label>
                                 Bank:
                                 <select value={bank} onChange={(e) => setBank(e.target.value)}>
@@ -101,8 +101,6 @@ export default function AdminCreditCard () {
                                     <option>Visa</option>
                                 </select>
                             </label>
-                        </div>
-                        <div className={styles.form_add_digits_status}>
                             <label>
                                 Last four digits:
                                 <input value={lastFourDigits} onChange={(e) => setLastFourDigits(e.target.value)}></input>
@@ -114,8 +112,6 @@ export default function AdminCreditCard () {
                                     <option>Inactive</option>
                                 </select>
                             </label>
-                        </div>
-                        <div className={styles.form_add_balance}>
                             <label>
                                 Balance:
                                 <input type='number' value={balance} onChange={(e) => setBalance(e.target.value)}></input>
@@ -151,12 +147,12 @@ export default function AdminCreditCard () {
                         <div className={styles.form_add_title}>
                             <h2>New credit card record</h2>                        
                         </div>
-                        <div className={styles.form_add_holder}>
-                            <label>
-                                Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
-                            </label>
-                        </div>
-                        <div className={styles.form_add_bank_type}>
+                        <div className={styles.form_add_inputs}>
+                            <div className={styles.form_add_holder}>
+                                <label>
+                                    Card holder:<input value={cardHolder} onChange={(e) => setCardHolder(e.target.value)} type='text' placeholder='Card holder'></input>
+                                </label>
+                            </div>
                             <label>
                                 Bank:
                                 <select value={bank} onChange={(e) => setBank(e.target.value)}>
@@ -171,8 +167,6 @@ export default function AdminCreditCard () {
                                     <option>Visa</option>
                                 </select>
                             </label>
-                        </div>
-                        <div className={styles.form_add_digits_status}>
                             <label>
                                 Last four digits:
                                 <input value={lastFourDigits} onChange={(e) => setLastFourDigits(e.target.value)}></input>
@@ -184,8 +178,6 @@ export default function AdminCreditCard () {
                                     <option>Inactive</option>
                                 </select>
                             </label>
-                        </div>
-                        <div className={styles.form_add_balance}>
                             <label>
                                 Balance:
                                 <input type='number' value={balance} onChange={(e) => setBalance(e.target.value)}></input>

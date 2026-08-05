@@ -84,9 +84,7 @@ export default function Login () {
                                     Password:<input value={password} onChange={(e) => setPassword(e.target.value)} type='password' maxLength={10} placeholder='Password'></input>
                                 </label>                                
                             </div>
-                            <div className={styles.card_create_acocunt}>
-                                <p>Don't have an account? <Link href='/signup'>Create an account.</Link></p>
-                            </div>
+                            
                             <div className={styles.card_button}>
                                 <button type='submit'>Log in</button>
                             </div>
@@ -96,6 +94,9 @@ export default function Login () {
                             </div>
                             <div className={styles.card_google}>
                                 <button>Google</button>
+                            </div>
+                            <div className={styles.card_create_acocunt}>
+                                <p>Don't have an account? <Link href='/signup'>Create an account.</Link></p>
                             </div>
                         </form>
                     </div>
